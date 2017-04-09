@@ -4,35 +4,25 @@ import Foundation
 
 //: ## Enum
 struct Mage {
-    enum Gender {
-        case male
-        case female
-    }
-
     let name: String
     let maxLifepoints: Int
     var lifepoints: Int
-    let gender: Gender
 
-
-    var isAlive: Bool {
-        return self.lifepoints > 0
-    }
-
-    init(name: String, gender: Gender = .male, maxLifePoints: Int) {
-        self.name = name
-        self.maxLifepoints = maxLifePoints
-        self.lifepoints = maxLifepoints
-        self.gender = gender
-    }
+    // TODO
 }
 
-let mage = Mage(name: "Margot", gender: .female, maxLifePoints: 4)
-print("Mage : \(mage), max HP : \(mage.maxLifepoints) ")
+/*:
+ * Callout(Excercise):
+ \- Add a enum property `Gender` (male, female) to `Mage`\
+ \- Make `Mage` accept male as default value in init
+ */
+//:
+let margot = Mage(name: "Margot", gender: Mage.Gender.female, maxLifePoints: 4)
+assert(margot.gender == .female)
 
-let defaultMage = Mage(name: "Pascal", maxLifePoints: 8)
-print("Default Mage : \(defaultMage), max HP : \(defaultMage.maxLifepoints) ")
+let pascal = Mage(name: "Pascal", maxLifePoints: 8)
+assert(pascal.gender == .male)
 
-
+print("SUCCESS => you can continue")
 
 //: [Next](@next)

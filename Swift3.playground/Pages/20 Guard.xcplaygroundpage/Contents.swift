@@ -24,23 +24,7 @@ struct Mage {
     var resources: [Resource:UInt] = [:]
 
     mutating func buy(_ item: Item) throws {
-        var remainingResources = self.resources
-        var missingResources: [Resource] = []
-
-        for (resource, qty) in item.cost {
-            guard let availableQty = resources[resource], qty <= availableQty else {
-                missingResources.append(resource)
-                continue
-            }
-
-            remainingResources[resource] = availableQty - qty
-        }
-
-        if !missingResources.isEmpty {
-            throw BuyError.notEnoughResources(missingResources)
-        }
-
-        self.resources = remainingResources
+        // TODO
     }
 }
 

@@ -11,16 +11,7 @@ import Foundation
  \- Declare a **immutable** var `maxStrength` with value 100
 */
 
-var strength: Int = 10
-let maxStrength: Int = 100
-
-var isStrong: Bool {
-    if strength > 10 {
-        return true
-    } else {
-        return false
-    }
-}
+// TODO
 
 strength += 20
 

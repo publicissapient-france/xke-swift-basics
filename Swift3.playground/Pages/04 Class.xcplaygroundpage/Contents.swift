@@ -4,19 +4,7 @@ import Foundation
 
 //: ## Class
 class Mage {
-    let name: String
-    let maxLifepoints: Int
-    var lifepoints: Int
-
-    var isAlive: Bool {
-        return self.lifepoints > 0
-    }
-
-    init(name: String, maxLifePoints: Int) {
-        self.name = name
-        self.maxLifepoints = maxLifePoints
-        self.lifepoints = maxLifepoints
-    }
+    // TODO
 }
 
 //: * Callout(Excercise): Add properties to `Mage` (name, maxLifePoints, isAlive) class to make following lines compile

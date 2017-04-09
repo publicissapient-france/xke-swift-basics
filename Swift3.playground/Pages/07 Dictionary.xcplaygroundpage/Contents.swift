@@ -13,12 +13,10 @@ var resources: [Resource:UInt] = [:]
 
 /*:
  * Callout(Excercise):
-  Add 4 woods\
- Add 5 metals
+\- Add 4 woods into `resources`\
+\- Add 5 metals into `resources`
 */
-resources[.wood] = 4
-resources[.metal] = 5
-
+//TODO
 
 assert(resources[.wood] == 4)
 assert(resources[.metal] == 5)

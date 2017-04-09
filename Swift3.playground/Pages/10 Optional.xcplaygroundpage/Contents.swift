@@ -37,16 +37,8 @@ enum Resource : String {
 
 //: - Callout(Excercise): Implement `add:qty:to:` to add quantity of resource to resources
 func add(_ resource: Resource, qty: UInt, to resources: [Resource:UInt]) -> [Resource:UInt] {
-    var resources = resources
-
-    if resources[resource] != nil {
-        resources[resource] = resources[resource]! + qty
-    }
-    else {
-        resources[resource] = qty
-    }
-
-    return resources
+    // TODO
+    return [:]
 }
 
 

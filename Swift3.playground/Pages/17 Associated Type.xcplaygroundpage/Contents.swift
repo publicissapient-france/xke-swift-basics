@@ -66,29 +66,22 @@ carapuce.attack() //🌧
 */
 //:
 
-protocol Weapon {
+protocol Weapon { }
 
-}
+struct Staff : Weapon { }
 
-struct Staff : Weapon {
-
-}
-
-struct Bow : Weapon {
-}
+struct Bow : Weapon { }
 
 protocol Player {
-    associatedtype WeaponType: Weapon
-
-    var weapon: WeaponType? { get }
+    // TODO
 }
 
-struct Mage : Player {
-    var weapon: Staff? = nil
+struct Mage {
+    // TODO
 }
 
-struct Archer : Player {
-    var weapon: Bow? = nil
+struct Archer {
+    // TODO
 }
 
 let mage = Mage(weapon: Staff())

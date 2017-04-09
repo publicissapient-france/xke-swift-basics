@@ -19,31 +19,15 @@ struct Item {
 }
 
 /*:
- - Callout(Exercise): Implement `buy` method
+ - Callout(Exercise): Implement `buy` method\
+\- Throws an error if mage has not enough resource to buy item. Otherwise remove resources from mage
 */
 
 struct Mage {
     var resources: [Resource:UInt] = [:]
 
-    // Throws an error if mage has not enough resource to buy item. Otherwise remove resources from mage
     mutating func buy(_ item: Item) throws {
-        var remainingResources = self.resources
-        var missingResources: [Resource] = []
-
-        for (resource, qty) in item.cost {
-            if resources[resource] == nil || qty > resources[resource]! {
-                missingResources.append(resource)
-            }
-            else {
-                remainingResources[resource] = remainingResources[resource]! - qty
-            }
-        }
-
-        if !missingResources.isEmpty {
-            throw BuyError.notEnoughResources(missingResources)
-        }
-
-        self.resources = remainingResources
+        // TODO
     }
 }
 

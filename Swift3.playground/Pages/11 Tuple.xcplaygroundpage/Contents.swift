@@ -5,14 +5,10 @@ import Foundation
 //: ## Tuple
 struct Mage {
     let name: String
-    let maxStats: (lifepoints: Int, manapoints: Int)
-    var stats: (lifepoints: Int, manapoints: Int)
 
-    init(name: String, stats: (lifepoints: Int, manapoints: Int)) {
-        self.name = name
-        self.maxStats = stats
-        self.stats = stats
-    }
+    // TODO
+    var lifePoints: Int
+    let maxLifePoints: Int
 }
 
 /*:

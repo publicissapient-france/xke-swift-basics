@@ -17,12 +17,7 @@ enum Resource : String {
 
 extension Dictionary where Key == Resource, Value == UInt {
     mutating func add(_ resource: Resource, qty: UInt) {
-        if let resourceQty = resources[resource] {
-            self[resource] = resourceQty + qty
-        }
-        else {
-            self[resource] = qty
-        }
+        // TODO
     }
 }
 

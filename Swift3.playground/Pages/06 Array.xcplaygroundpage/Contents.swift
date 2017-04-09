@@ -21,7 +21,8 @@ mutableResources.remove(at: 1)
 let resources: [Resource] = [.wood, .metal]
 
 func mapToString(_ resources: [Resource]) -> [String] {
-    return resources.map { $0.rawValue }
+    // TODO
+    return []
 }
 
 assert(mapToString(resources) == ["wood", "metal"], "[MAP] KO")
@@ -29,7 +30,8 @@ print("[MAP] OK")
 
 //: * Callout(Excercise: Filter): Complete `resources:contain:` to return true if passed resource is present`
 func resources(_ resources: [Resource], contain resource: Resource) -> Bool {
-    return resources.filter { $0 == resource }.count > 0
+    // TODO
+    return true
 }
 
 assert(resources([.wood], contain: .wire) == false)
@@ -38,7 +40,8 @@ print("[FILTER] OK")
 
 //: * Callout(Excercise: Reduce): Complete `count` to count resources
 func count(_ resources: [Resource]) -> Int {
-    return resources.reduce(0) { count, _ in count + 1 }
+    // TODO
+    return -1
 }
 
 assert(count([.wood, .wood, .metal, .metal]) == 4, "[REDUCE] KO")
