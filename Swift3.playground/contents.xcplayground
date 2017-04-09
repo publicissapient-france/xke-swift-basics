@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='01 Variables - Constants'/>
+        <page name='02 Strings'/>
+        <page name='03 Numerics'/>
+        <page name='04 Class'/>
+        <page name='05 Struct'/>
+        <page name='09 Enum'/>
+        <page name='06 Array'/>
+        <page name='07 Dictionary'/>
+        <page name='08 Natives Operators'/>
+        <page name='11 Tuple'/>
+        <page name='12 Closures'/>
+        <page name='10 Optional'/>
+        <page name='16 Protocol Extensions'/>
+        <page name='17 Associated Type'/>
+        <page name='18 Error handling'/>
+        <page name='19 If Let'/>
+        <page name='20 Guard'/>
+        <page name='21 Switch'/>
+        <page name='22 Pattern Matching'/>
+    </pages>
+</playground>
