@@ -6,35 +6,42 @@ import Foundation
  # LE LANGAGE ET LES CONSTRUCTIONS DE BASE
  */
 //: ## Native Operators
-let collections = [[5, 2, 7], [4, 8], [9, 1, 3]]
-/*: Simple FlatMap */
-let simpleCollections = collections.flatMap { return $0 }
-print(simpleCollections)
-
-/*: FlatMap combine with Filter*/
-let onlyEven = collections.flatMap {
-    intArray in intArray.filter { $0 % 2 == 0 }
-}
-print(onlyEven)
-
-/*: Simplified FlatMap */
-let onlyEvenBis = collections.flatMap { $0.filter { $0 % 2 == 0 } }
-print(onlyEvenBis)
-
-/*: Chaining */
-let allSquared = collections.flatMap { $0.map { $0 * $0 } }
-print(allSquared)
-
-let sums = collections.map { $0.reduce(0, +) }
-print(sums)
-
-/*: FlatMap with User */
-struct User {
-
-    let email:String?
+enum Resource : String {
+    case wood
+    case wire
+    case metal
 }
 
-let users = [User(email: "fmirault@xebia.fr"), User(email: nil), User(email: nil), User(email: "xebia@xebia.fr")]
-print(users.flatMap{ $0.email })
+//: * Callout(Excercise: Map): Complete `mapToString` to return `Resource` as `String`
+let resources: [Resource] = [.wood, .metal]
+
+func mapToString(_ resources: [Resource]) -> [String] {
+    // TODO
+    return []
+}
+
+assert(mapToString(resources) == ["wood", "metal"], "[MAP] KO")
+print("[MAP] OK")
+
+//: * Callout(Excercise: Filter): Complete `resources:contain:` to return true if passed resource is present`
+func resources(_ resources: [Resource], contain resource: Resource) -> Bool {
+    // TODO
+    return true
+}
+
+assert(resources([.wood], contain: .wire) == false)
+assert(resources([.wood, .wire, .wire], contain: .wire) == true)
+print("[FILTER] OK")
+
+//: * Callout(Excercise: Reduce): Complete `count` to count resources
+func count(_ resources: [Resource]) -> Int {
+    // TODO
+    return -1
+}
+
+assert(count([.wood, .wood, .metal, .metal]) == 4, "[REDUCE] KO")
+print("[REDUCE] OK")
+
+print("SUCCESS => you can continue")
 
 //: [Next](@next)
